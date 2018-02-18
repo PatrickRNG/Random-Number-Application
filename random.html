@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/random.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Random</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="boxWrapper">
+
+            <h1>Random Number Generator</h1>
+
+            <div class="resultWrapper">
+
+                <div class="inputWrapper">
+                    <input type="number" id="num1" placeholder="From (Min)">
+                    <input type="number" id="num2" placeholder="To (Max)">
+                </div>
+
+                <div id="result"><p>0</p></div>
+            </div>
+            
+            <form>
+            	<label for="checkbox">Chance to roll max-number</label>
+            	<input type="checkbox" id="check">
+            </form>
+            
+            <div id="button">Random Number</div>
+            <div id="error"></div>
+            
+            <div id="chanceResult"><p></p></div>
+            
+        </div>
+        
+    </div>
+    
+<script src="js/random.js"></script>
+</body>
+
+</html>

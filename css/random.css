@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+html {
+	font-family: 'Open Sans' !important;
+}
+
+body {
+    background-image: url(img/bg04.jpg);
+    background-size: cover;
+}
+
+.boxWrapper {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: wrap column;
+    padding: 40px;
+    border: 2px solid #8290ff;
+    opacity: .7;
+    border-radius: 6px;
+    background: #fff;
+    /*  CENTERER  */
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -80%);
+}
+
+.boxWrapper h1 {
+    color: #5969e6;
+    font-weight: 300;
+}
+
+.inputWrapper {
+    margin: 20px 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+
+.inputWrapper input {
+    margin: 12px 0;
+    padding: 8px;
+    border: 1px solid #ff6b6b;
+    border-radius: 3px;
+    color: #ff9898;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.inputWrapper input::placeholder {
+    color: #ffb2b2;
+    font-size: 13px;
+}
+
+.inputWrapper input:focus {
+    outline: none;
+    border-color: #4a36b9;
+}
+
+.resultWrapper {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+#result {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;
+    margin-left: 60px;
+    align-self: center;
+    border: 1px solid #ff6b6b;
+    color: #ff6b6b;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    user-select: none;
+}
+
+#button {
+	margin-top: 25px;
+    padding: 12px 10px;
+    background: #8290ff;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#button:hover {
+    background: #ff6b6b !important;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+#error {
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ff9393;
+    color: #fff;
+    display: none;
+}
+
+#chanceResult {
+	font-size: 16px;
+	color: #3649e3;
+	margin-top: 20px;
+}

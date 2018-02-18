@@ -26,65 +26,97 @@ document.getElementById('button').addEventListener('click', function () {
 
 	result.textContent = randomNum;
 
-	numR(randomNum);
-
-});
-
-function numR(rightNum) {
-
-	let maxNum = parseInt(document.getElementById('num2').value);
+	// numR(randomNum);
 
 	let checkbox = document.getElementById('check');
 	let chanceResult = document.getElementById('chanceResult');
 	let list = [];
 
-	while (true) {
-		let randomNum = Math.floor(Math.random() * (rightNum + 1));
+	let key = true;
 
-		list.push(randomNum);
+	while (key) {
+		// let randomNum = Math.floor(Math.random() * (rightNum + 1));
+		let randomNum2 = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
 
-		if (randomNum == rightNum) {
-			chanceResult.innerHTML = 'Rolled: ' + list.length + ' times to reach ' + rightNum;
-			break;
+		list.push(randomNum2);
+
+		if (randomNum2 == randomNum) {
+			chanceResult.innerHTML = 'Rolled: ' + list.length + ' times to reach ' + randomNum;
+			key = false;
 		}
 
 		if (checkbox.checked == true) {
-			checkMax(maxNum);
-			break;
+			let chanceResult = document.getElementById('chanceResult');
+			let maxList = [];
+	
+			while (key) {
+				// let randomNum2 = Math.floor(Math.random() * (maxNum + 1));
+				let randomNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+	
+				maxList.push(randomNum);
+	
+				if (randomNum == maxNum) {
+					chanceResult.innerHTML = 'Rolled: ' + maxList.length + ' times to reach ' + maxNum;
+					key = false;
+				}
+				
+			}
+			
 		}
-
 	}
+});
 
-}
+// function numR(rightNum) {
 
-function checkMax(maxNum) {
-	let chanceResult = document.getElementById('chanceResult');
-	let maxList = [];
+// 	let minNum = parseInt(document.getElementById('num1').value);
+// 	let maxNum = parseInt(document.getElementById('num2').value);
 
-	while (true) {
-		let randomNum2 = Math.floor(Math.random() * (maxNum + 1));
+// 	let checkbox = document.getElementById('check');
+// 	let chanceResult = document.getElementById('chanceResult');
+// 	let list = [];
 
-		maxList.push(randomNum2);
+// 	while (true) {
+// 		// let randomNum = Math.floor(Math.random() * (rightNum + 1));
+// 		let randomNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
 
-		if (randomNum2 == maxNum) {
-			chanceResult.innerHTML = 'Rolled: ' + maxList.length + ' times to reach ' + maxNum;
-			break;
-		}
+// 		list.push(randomNum);
 
-	}
+// 		if (randomNum == rightNum) {
+// 			chanceResult.innerHTML = 'Rolled: ' + list.length + ' times to reach ' + rightNum;
+// 			console.log(list);
+// 			break;
+// 		}
 
-	console.log(maxList);
+// 		if (checkbox.checked == true) {
+// 			checkMax(maxNum);
+// 			break;
+// 		}
 
-}
+// 	}
 
+// }
 
-//
-//checkbox.addEventListener('change', check);
-//
-//function check(){
-//	
-//	if (checkbox.checked) {
-//		
-//	}
-//	
-//}
+// function checkMax(maxNum) {
+
+// 	let minNum = parseInt(document.getElementById('num1').value);
+
+// 	let chanceResult = document.getElementById('chanceResult');
+// 	let maxList = [];
+
+// 	while (true) {
+// 		// let randomNum2 = Math.floor(Math.random() * (maxNum + 1));
+// 		let randomNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+
+// 		maxList.push(randomNum);
+
+// 		if (randomNum == maxNum) {
+// 			chanceResult.innerHTML = 'Rolled: ' + maxList.length + ' times to reach ' + maxNum;
+// 			break;
+// 		}
+
+// 	}
+
+// 	console.log(maxList);
+// 	console.log(maxNum);
+
+// }
